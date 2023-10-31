@@ -6,7 +6,7 @@ import Typed from "typed.js";
 export default function Hero() {
   useEffect(() => {
     const options = {
-      strings: ["Front-End Developer</i>", "Digistar Class <i>Mentee</i>"],
+      strings: ["Front-End Developer</i>", "Digistar Class <i>Mentee</i>", "Coder Institute's <i>President</i>"],
       typeSpeed: 80,
       backDelay: 1000,
       loop: true,

@@ -12,13 +12,23 @@ export default function Navbar() {
 
   return (
     <div class="sticky top-0 z-10 w-full bg-white flex flex-col lg:flex-row items-center justify-between p-5">
-      <div class="mb-4 lg:mb-0 lg:mr-10">
+      <Link href="/" class="mb-4 lg:mb-0 lg:mr-10">
         <img src="/assets/static/logo/logo.svg" alt="Logo" />
-      </div>
+      </Link>
       <div class={`flex flex-col lg:flex-row items-center lg:items-stretch lg:gap-3 ${showMenu ? "block" : "hidden lg:flex"}`}>
-        <Link href="#experience">
+      <Link href="/">
+          <p class="text-gray-500 font-bold px-4 py-1 rounded-md transition hover:bg-white hover:text-black lg:hover:bg-white lg:hover:text-black">
+            Home
+          </p>
+        </Link>
+        <Link href="/experience">
           <p class="text-gray-500 font-bold px-4 py-1 rounded-md transition hover:bg-white hover:text-black lg:hover:bg-white lg:hover:text-black">
             Experience
+          </p>
+        </Link>
+        <Link href="/project">
+          <p class="text-gray-500 font-bold px-4 py-1 rounded-md transition hover:bg-white hover:text-black lg:hover:bg-white lg:hover:text-black">
+            Project
           </p>
         </Link>
         <Link href="/achievement">
@@ -31,13 +41,7 @@ export default function Navbar() {
             Journal
           </p>
         </Link>
-        <Link href="/portofolio">
-          <p class="text-gray-500 font-bold px-4 py-1 rounded-md transition hover:bg-white hover:text-black lg:hover:bg-white lg:hover:text-black">
-            Portfolio
-          </p>
-        </Link>
       </div>
-      {/* add hamburger button */}
       <div class="flex lg:hidden">
         <button class="mobile-menu-button" onClick={toggleMenu}>
           <svg
